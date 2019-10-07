@@ -1,3 +1,4 @@
+<?php
 function getParams($str){
     # Account regexp
     $ACCOUNT_RE = "/\b(\d{15})\b/"; // 15 digits as a single word
@@ -15,3 +16,4 @@ function getParams($str){
             , "amount" => count($amount[1]) ? $amount[1][0] : "Not found"
             , "account" => count($account[1]) ? $account[1][0] : "Not found"];
 }
+?>
