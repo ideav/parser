@@ -4,7 +4,7 @@ function getParams($str){
     # Amount regexp
     $AMOUNT_RE = "/\b(\d{1,12}[\.,]?\d{0,2}) ?[р|r]/ui"; // amount followed by r (rub) or р (руб)
     # Pass code regexp
-    $PWD_RE = "/" // ."пароль ?[:-]? ?" // uncomment this line for strict validation having a known keyword 'паспорт' fisrt
+    $PWD_RE = "/" // ."пароль ?[:-]? ?" // uncomment this line for strict validation having a known keyword 'пароль' fisrt
                 ."\b(\d{4,6})\b(?!( ?р| ?r|,\d|.\d))/ui"; // 4 to 6 digts not followed by float part, r (rub), or р (руб)
 
     preg_match_all($PWD_RE, $str, $pwd); // Fetch the Password
